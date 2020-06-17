@@ -1,0 +1,16 @@
+<!-- 幻灯片 -->
+<swiper indicator-dots="true" autoplay="true" interval="1000" duration="500" circular="true" indicator-active-color="#ffffff">
+  <view wx:for="{{swiperImg}}" wx:key="swiper{{index}}">
+    <swiper-item>
+      <image src="{{item.src}}"></image>
+    </swiper-item>
+  </view>
+</swiper>
+<!-- 新闻列表 -->
+<view class="news-list">
+  <view class="news-item" wx:for="{{newsList}}" wx:key="id" bindtap="goToDetail" data-id = "{{item.id}}">
+    <image src="{{item.poster}}"></image>
+    <text>{{item.title}} - {{item.add_date}}</text>
+  </view>
+  <button plain="true">加载更多</button>
+</view>

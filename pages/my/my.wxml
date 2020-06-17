@@ -1,0 +1,15 @@
+<!-- 登陆页面 -->
+<view class="myLogin">
+  <image src="{{src}}"></image>
+  <text>{{nickName}}</text>
+</view>
+<!-- 收藏夹 -->
+<view class="myFavorite">
+  <text>我的收藏(1)</text>
+  <view class="news-list">
+    <view class="news-item" wx:for="{{newsList}}" wx:key="id">
+      <image src="{{item.poster}}"></image>
+      <text>{{item.title}} - {{item.add_date}}</text>
+    </view>
+  </view>
+</view>
